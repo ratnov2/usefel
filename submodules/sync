@@ -1,2 +1,6 @@
 git submodule sync
 git submodule update --init --recursive
+
+## PULLING
+git submodule update --remote --merge
+git submodule foreach git pull origin main
