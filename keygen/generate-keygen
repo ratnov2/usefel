@@ -8,3 +8,15 @@ chmod 700 ~/.ssh
 
 echo "PUBLIC_KEY" >> ~/.ssh/authorized_keys
 chmod 600 ~/.ssh/authorized_keys
+
+//for CI CD
+
+ssh-keygen -t ed25519 -C "github-actions" -f github_actions_key
+
+На сервере добавляем публичный ключ в authorized_keys:
+
+cat github_actions_key.pub >> ~/.ssh/authorized_keys
+chmod 600 ~/.ssh/authorized_keys
+
+приватный ключ
+Settings → Secrets and variables → Actions → New repository secret
