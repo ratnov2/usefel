@@ -7,3 +7,7 @@ git submodule add git@github.com:yourusername/repo3.git repo3
 
 git commit -am "Added 3 repositories as submodules"
 git push origin main
+
+
+OR
+git clone --recurse-submodules <URL_репозитория>
